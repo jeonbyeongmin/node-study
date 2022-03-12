@@ -1,0 +1,24 @@
+{
+  "name": "study",
+  "version": "1.0.0",
+  "description": "node 공부하기",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeonbyeongmin/node-study.git"
+  },
+  "author": "jeon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeonbyeongmin/node-study/issues"
+  },
+  "homepage": "https://github.com/jeonbyeongmin/node-study#readme",
+  "dependencies": {
+    "express": "4.17.3",
+    "mongoose": "6.2.6"
+  }
+}
