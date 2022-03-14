@@ -21,7 +21,7 @@
 1. MEAN - NodeJS | Angular JS | Express JS | MongoDB
 2. MERN - NodeJS | React JS | Express JS | MongoDB
 
-Angular 와 React 의 차이이다. 공통적으로는 express와 mongoDB를 사용하는 것 같다. 나는 React를 사용하고 있다. 전 세계적으로 리액트를 사랑하니까! MERN 스택을 배우게 되겠구나.. 그런데 외국은 NodeJS와 MongoDB를 정말 사랑하는구나. 생산성도 좋고 러닝커브도 적기 때문일 것이라 생각한다. 하지만 나는
+Angular 와 React 의 차이이다. 공통적으로는 express와 mongoDB를 사용하는 것 같다. 나는 React를 사용하고 있다. 전 세계적으로 리액트를 사랑하니까! MERN 스택을 배우게 되겠구나.. 그런데 외국은 NodeJS와 MongoDB를 정말 사랑하는구나. 생산성도 좋고 러닝커브도 적기 때문일 것이라 생각한다.
 
 ### 근데 MVC가 뭔데?
 
