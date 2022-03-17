@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const port = 4000;
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const config = require("./config/key");
@@ -28,7 +27,11 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.post("/api/users/register", (req, res) => {
+app.get("/api/hello", (req, res) => {
+  res.send("hello~~~");
+});
+
+app.post("/api/user/register", (req, res) => {
   // 회원가입할 때 필요한 정보들을 client에서 가져오면 그것들을 데이터 베이스에 넣어준다.
   const user = new User(req.body);
 
@@ -38,7 +41,7 @@ app.post("/api/users/register", (req, res) => {
   });
 });
 
-app.post("/api/users/login", (req, res) => {
+app.post("/api/user/login", (req, res) => {
   // 요청된 이메일을 데이터베이스에서 찾는다.
   User.findOne({ email: req.body.email }, (err, user) => {
     if (!user) {
@@ -72,7 +75,7 @@ app.post("/api/users/login", (req, res) => {
 });
 
 // auth라는 미들웨어가 개입.
-app.get("/api/users/auth", auth, (req, res) => {
+app.get("/api/user/auth", auth, (req, res) => {
   res.status(200).json({
     _id: req.user._id,
     isAdmin: req.user.role === 0 ? false : true,
@@ -85,12 +88,14 @@ app.get("/api/users/auth", auth, (req, res) => {
   });
 });
 
-app.get("/api/users/logout", auth, (req, res) => {
+app.get("/api/user/logout", auth, (req, res) => {
   User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
     if (err) return res.json({ success: false, err });
     return res.status(200).send({ success: true });
   });
 });
+
+const port = 4000;
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
